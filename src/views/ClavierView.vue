@@ -1,16 +1,4 @@
-
-
 <template>
-
-<!--
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-    <router-link to="/clavier">clavier</router-link>
-  </nav>
-  <router-view/>
--->
-  
   <div>
     <div class="keypad">
       <button v-for="n in ['1', '2', '3', '4', '5', '6', '7', '8', '9', '*', '0', '#']" :key="n" @click="addNumber(n)">{{ n }}</button>
@@ -111,7 +99,4 @@ export default {
   text-align: center;
 }
 </style>
-
-
-  
 

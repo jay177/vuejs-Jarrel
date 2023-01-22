@@ -11,21 +11,21 @@
   <router-view/>
 -->
   
-  <div>
+  <div class="center">
     <div class="keypad">
       <button v-for="n in ['1', '2', '3', '4', '5', '6', '7', '8', '9', '*', '0', '#']" :key="n" @click="addNumber(n)">{{ n }}</button>
     </div>
-    <div>
+    <div >
       <input type="text" v-model="number" readonly />
     </div>
     
-    <div>
+    <div >
       <button @click="searchContact">Rechercher contact</button>
     </div>
-    <div>
+    <div >
       <button @click="call">Appeler</button>
     </div>
-    <div>
+    <div class="app">
       <h3>Journal d'appels</h3>
       <table>
         <tr>
@@ -94,7 +94,17 @@ export default {
 .keypad {
   display: flex;
   flex-wrap: wrap;
+ 
+
 }
+.center{
+  display: block;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 30%;
+  right: 40%;
+}
+
 
 .key {
   width: 33%;
